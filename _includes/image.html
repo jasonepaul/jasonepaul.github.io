@@ -1,0 +1,14 @@
+<figure style="display: block; text-align: center">
+  <img
+    src="{{ include.src }}"
+    alt="{{ include.alt }}"
+    {%
+    if
+    include.width
+    %}style="width: {{ include.width }}; display: block; margin: 0 auto;"
+    {%
+    endif
+    %}
+  />
+  <figcaption>{{ include.caption }}</figcaption>
+</figure>
