@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Exploring IoT with Edge Devices"
-date: 2021-02-01
-categories:
+date: 2021-02-18
+categories: "software"
 ---
 
 **Technologies:**

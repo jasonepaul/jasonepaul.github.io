@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Computer Vision and Training of Convolutional Neural Network (CNN) on Horse-or-Human Dataset"
+date: 2020-10-26
+categories: "software"
+---
+
+[Github](https://github.com/jasonepaul/cnn-horse-or-human)
+
+This was a university course project with subsequent improvements. It is fundamentally a machine learning classification problem where the target variable is binary, representing whether an image has a human or horse.
+
+The project uses the well-known “horse vs human” dataset made available for learning computer vision algorithms. Credit for the dataset goes to Laurence Moroney (lmoroney@gmail.com / laurencemoroney.com). Images are 300 x 300 pixels in 3 colour channels with various species of horses and diversity of humans represented. Images were available in the following pre-organized categories:
+
+Image Categories and Quantities:
+
+|| Training | Test | Total |
+|Horses | 500 | 128 | 628 |
+|Humans | 527 | 128 | 655 |
+|Total | 1027 | 256 | 1283 |
+
+Sample human and horse images:
+
+{% include image.html src="/assets/posts/cnn-training-on-horse-or-human-data/human12-00.png" alt="Sample human" caption="Sample human" %}
+{% include image.html src="/assets/posts/cnn-training-on-horse-or-human-data/horse02-0.png" alt="Sample horse" caption="Sample horse" %}
+
+A convolutional neural network (CNN) was chosen as the classification model. “Training” data was divided into 80% training and 20% validation during the model fitting process. The CNN was built using the TensorFlow (Keras) Sequential class.
+
+The first model constructed used 11 layers (8 filter, 3 fully connected dense) for 2.2 million trainable parameters. Regularization (L2) and dropout was used to try to reduce over-fitting of the training data. The resulting best accuracy on the test data was 83.6%.
+
+Subsequent to completion of the course, I revisited this project and built a second model that incorporated the VGG16 (very deep) CNN architecture. (This design was used to win an Imagenet competition in 2014.) My idea was to experiment with transfer learning—taking a successful model made by others on a classification problem and using this on an entirely different classification problem. I used TensorFlow’s VGG16 CNN model with the pre-trained weights for the filter layers, and added fully connected layers that were subsequently trained to my problem. The resulting model had 21 layers (18 filter, 3 fully connected dense) for 14.7 million trainable parameters. This model turned out to be highly successful with an accuracy on the test data of 99.6%.
