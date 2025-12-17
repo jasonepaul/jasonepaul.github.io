@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Computer Vision and Training of Convolutional Neural Network (CNN) on Horse-or-Human Dataset"
-date: 2020-10-26
-categories: "software"
+categories: [software]
 ---
 
 [Github](https://github.com/jasonepaul/cnn-horse-or-human)

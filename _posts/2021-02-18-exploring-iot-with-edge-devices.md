@@ -2,7 +2,7 @@
 layout: post
 title: "Exploring IoT with Edge Devices"
 date: 2021-02-18
-categories: "software"
+categories: [software, mechanical]
 ---
 
 **Technologies:**

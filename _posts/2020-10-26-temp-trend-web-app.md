@@ -2,7 +2,7 @@
 layout: post
 title: "Temperature Trend Web App"
 date: 2020-10-26
-categories: "software"
+categories: [software]
 ---
 
 [Github](https://github.com/jasonepaul/django_weather_app/)

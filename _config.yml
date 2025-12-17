@@ -28,6 +28,11 @@ github_username: jasonepaul
 
 # Build settings
 theme: minima
+header_pages:
+  - categories/software.md
+  - categories/mechanical.md
+  - categories/volunteer.md
+permalink: /:year/:month/:day/:title/
 plugins:
 # Exclude from processing.
 # The following items will not be processed, by default.
